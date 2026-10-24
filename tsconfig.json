@@ -19,6 +19,8 @@
       "pretty": true,
       "resolveJsonModule": true,
       "paths": {
+        "@auth/*": ["./src/features/auth/*"],
+        "@user/*": ["./src/features/user/*"],
         "@global/*": ["./src/shared/globals/*"],
         "@service/*": ["./src/shared/services/*"],
         "@sockets/*": ["./src/shared/sockets/*"],
@@ -27,4 +29,3 @@
       }
     }
   }
-  

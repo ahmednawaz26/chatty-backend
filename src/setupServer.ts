@@ -38,7 +38,8 @@ export class ChattyServer {
       cookieSession({
         name: 'session',
         keys: [config.SECRET_KEY_ONE!, config.SECRET_KEY_TWO!],
-        maxAge: 7 * 24 * 60 * 60 * 1000,
+        // maxAge: 7 * 24 * 60 * 60 * 1000,
+        maxAge: 5000,
         secure: config.NODE_ENV !== 'development'
       })
     );
@@ -112,5 +113,6 @@ export class ChattyServer {
     });
   }
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   private socketIOConnections(io: Server): void {}
 }

@@ -5,6 +5,7 @@
       "lib": ["DOM", "ES2015"],
       "outDir": "./build",
       "rootDir": "./src",
+      "types": ["node", "jest"],
       "strict": true,
       "noImplicitAny": true,
       "noUnusedLocals": false,
@@ -23,9 +24,11 @@
         "@user/*": ["./src/features/user/*"],
         "@global/*": ["./src/shared/globals/*"],
         "@service/*": ["./src/shared/services/*"],
-        "@sockets/*": ["./src/shared/sockets/*"],
-        "@workers/*": ["./src/shared/workers/*"],
+        "@socket/*": ["./src/shared/sockets/*"],
+        "@worker/*": ["./src/shared/workers/*"],
         "@root/*": ["./src/*"]
       }
-    }
+    },
+    "include": ["src/**/*.ts"],
+    "exclude": ["node_modules", "build", "coverage", "jest.config.ts"]
   }
